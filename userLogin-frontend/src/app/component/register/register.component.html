@@ -1,0 +1,100 @@
+<!-- <div class="container">
+  <div><h3 class="mt-4">User Registration Form</h3></div>
+
+  <form class="mt-4" [formGroup]="registerFrom" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="exampleInputEmail1">User Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleInputEmail1"
+        placeholder="Enter username"
+        formControlName="username"
+      />
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        placeholder="Enter email"
+        formControlName="email"
+      />
+      <small id="emailHelp" class="form-text text-muted"
+        >We'll never share your email with anyone else.</small
+      >
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="exampleInputPassword1"
+        placeholder="Password"
+        formControlName="password"
+      />
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <div>
+      <a href="login">Login page</a>
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+  </form>
+</div> -->
+<h1 appTDirective>helloo</h1>
+
+<div class="container pt-5">
+  <div class="row justify-content-sm-center pt-5">
+    <div class="col-sm-6 shadow round pb-3">
+      <h1 class="text-center pt-3 text-secondary">Login Page</h1>
+      <form [formGroup]="registerFrom" (ngSubmit)="onSubmit()">
+        <!-- <div class="form-group">
+                  <label class="col-form-label">Name:</label>
+                  <input formControlName="name" type="text" class="form-control">
+                  <small *ngIf="name?.invalid && name?.touched" class="text-danger">Name is Required</small> 
+                </div> -->
+        <div class="form-group">
+          <label class="col-form-label">User Name:</label>
+          <input formControlName="username" type="text" class="form-control" />
+          <!-- <small *ngIf="email?.invalid && email?.touched" class="text-danger"
+              >Email is Required</small
+            > -->
+        </div>
+        <div class="form-group">
+          <label class="col-form-label">Email address:</label>
+          <input formControlName="email" type="email" class="form-control" />
+          <!-- <small *ngIf="email?.invalid && email?.touched" class="text-danger"
+              >Email is Required</small
+            > -->
+        </div>
+        <div class="form-group">
+          <label class="col-form-label">Password:</label>
+          <input
+            formControlName="password"
+            type="password"
+            class="form-control"
+          />
+          <!-- <small
+              *ngIf="password?.invalid && password?.touched"
+              class="text-danger"
+              >Password is Required</small
+            > -->
+        </div>
+        <a href="register">Back to Register</a>
+        <br />
+        <button
+          [disabled]="registerFrom.invalid"
+          type="submit"
+          class="btn btn-primary"
+        >
+          Login
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
